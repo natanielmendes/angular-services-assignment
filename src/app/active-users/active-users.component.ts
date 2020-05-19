@@ -6,12 +6,10 @@ import { UserService } from '../shared/users.service';
   templateUrl: './active-users.component.html',
   styleUrls: ['./active-users.component.css']
 })
-export class ActiveUsersComponent implements OnInit {
+export class ActiveUsersComponent {
   users: string[];
 
-  constructor(private userService: UserService) {}
-
-  ngOnInit() {
+  constructor(private userService: UserService) {
     this.users = this.userService.activeUsers;
   }
 
